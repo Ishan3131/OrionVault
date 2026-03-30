@@ -28,14 +28,10 @@ async function showGames(queries = {}) {
 
 async function showGenres(queries = {}) {
     let genres = await api.getGenresCollection(queries);
-    console.log(genres)
-    console.dir(genres.results[0])
 }
 
 async function showDevelopers(queries = {}) {
     let developers = await api.getDevelopers(queries);
-    console.log(developers)
-    console.dir(developers.results[0])
 }
 
 document.getElementById('nav_collection').addEventListener('click', () => showGames())
