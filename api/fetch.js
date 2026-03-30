@@ -1,7 +1,7 @@
 export default async function handler(req,res) {
     const allowedSite = 'https://orion-vault-two.vercel.app';
     if(req.headers.origin !== allowedSite) {
-        console.log('fake url: '+req.headers.host);
+        console.log('fake url: '+req.headers.origin);
         return res.status(403).json({error: 'Forbidden'})
     }
     try{
