@@ -1,0 +1,15 @@
+ul {
+    display: flex;
+    width: 100%;
+    font-size: 30px;
+    justify-content: space-evenly;
+    list-style: none;
+    background: #281f67;
+    color: white;
+    text-decoration: underline;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
