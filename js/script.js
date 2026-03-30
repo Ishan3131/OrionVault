@@ -5,8 +5,6 @@ const results = document.getElementById('results');
 async function showGames(queries = {}) {
     let games = await api.getGamesCollection(queries);
     api.endpoints.next_games = games.next;
-    console.log(games)
-    console.dir(games.results[0])
 
     for(let game of games.results) {
         let div = document.createElement('div')
