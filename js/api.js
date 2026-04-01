@@ -1,6 +1,5 @@
 const endpoints = {
     games: 'games',
-    next_games: null,
     similar_games: id =>  `games/${id}/suggested`,
     game_youtube: id => `games/${id}/youtube`,
     genres: 'genres',
