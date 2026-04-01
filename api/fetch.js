@@ -4,12 +4,9 @@ export default async function handler(req,res) {
         return res.status(403).json({error: 'Forbidden'})
     }
     try{
-        console.log('try')
         const apiKey = process.env.API_KEY
-        console.log(apiKey)
         const endpoint = req.query.endpoint || '';
         const queries = req.query.queries || '';
-        console.log('https://api.rawg.io/api/'+endpoint+'?key='+apiKey+queries)
         const resp = await fetch('https://api.rawg.io/api/'+endpoint+'?key='+apiKey+queries);
         const data = await resp.json();
         if('next' in data) delete data.next;

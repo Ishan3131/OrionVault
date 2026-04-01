@@ -16,8 +16,6 @@ function generateApi(endpoint,queries) {
     for(let k in queries) {
         queryString += `&${k}=${queries[k]}`
     }
-    console.log(queryString)
-    console.log(`/api/fetch?endpoint=${endpoint}&queries=${encodeURIComponent(queryString)}`)
     return `/api/fetch?endpoint=${endpoint}&queries=${encodeURIComponent(queryString)}`
 }
 

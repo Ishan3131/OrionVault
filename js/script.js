@@ -30,7 +30,6 @@ async function renderGames(queries = {}) {
 async function renderGenres(queries = {}) {
     let genres = await api.getGenresCollection(queries);
     results.innerHTML = ''
-    console.log(genres.results)
     for(let genre of genres.results){
     results.innerHTML += `
         <div class='genre_container'>
@@ -45,7 +44,6 @@ async function renderGenres(queries = {}) {
 
 async function renderDevs(queries = {}) {
     let developers = await api.getDevelopers(queries);
-    console.log(developers.results)
     results.innerHTML = ''
     for(let dev of developers.results){
     results.innerHTML += `
