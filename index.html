@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orion Vault</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="./css/genre_cards.css" />
-    <link rel="stylesheet" href="./css/game_cards.css" />
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Orion Vault</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/nav.css" />
+        <link rel="stylesheet" href="./css/genre_cards.css" />
+        <link rel="stylesheet" href="./css/game_cards.css" />
+    </head>
 
-<ul>
-    <li id="nav_games">Games</li>
-    <li id="nav_genres">Genres</li>
-    <li id="nav_devs">Developers</li>
-</ul>
+    <body>
+        <section id="header">
+            <div id="bg_filter">
+                <nav class="navbar">
+                    <div class="nav-elems logo-title-container">
+                        <div class="nav-logo"><img src="images/logo.svg"></div>
+                        <p class="nav-title">ORION <span>VAULT</span></p>
+                    </div>
 
-    <div id="results">
-    </div>
+                    <div class="nav-elems tabs-container">
+                        <p class="nav-explore">EXPLORE</p>
+                        <ul class="nav-tabs">
+                            <li class="nav-tab" id="nav_games">Games</li>
+                            <li class="nav-tab" id="nav_genres">Genres</li>
+                            <li class="nav-tab" id="nav_devs">Developers</li>
+                        </ul>
+                    </div>
 
-</body>
+                    <div class="nav-elems theme-sign-in-up">
+                        <button class="toggle-theme">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20   " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-4 h-4" aria-hidden="true" data-hercules-id="src/pages/_components/Navbar.tsx:90:18" data-hercules-name="Sun"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+                        </button>
+
+                        <button class="sign-in-up-button sign-in">Sign In</button>
+
+                        <button class="sign-in-up-button sign-up">Sign Up</button>
+                    </div>
+
+                </nav>
+            </div>
+        </sction>
+        
+        <div id="results"></div>
+    </body>
 <script type="module" src="./js/script.js"></script>
 
 </html>

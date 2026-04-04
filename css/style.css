@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    cursor: default;
+}
+
+:root {
+    --theme-color: 0,0,0;
+    --nav-bg: 6,4,7;
+    --text-font-family: "Orbitron";
+    --components-font-family: 'Space Grotesk';
+    --font-color: 255,255,255;
+    --nav-explore-tab-bg-color: 'transparent';
+    --nav-explore-tab-tabs-font-color: 122,133,166;
+    --nav-explore-tab-tabs-hover-font-color: 255,255,255;
+    --nav-explore-tab-tabs-hover-bg-color: #261237;
+}
+
+[data-theme='light'] {
+    --theme-color: 255,255,255;
+    --nav-bg: 228,227,231;
+    --font-color: 0,0,0;
+    --nav-explore-tab-bg-color: '#ffffff';
+    --nav-explore-tab-tabs-hover-font-color: 0,0,0;
+    --nav-explore-tab-tabs-hover-bg-color: #d7c2e9;
+}
+
+body {
+    background-color: rgb(var(--theme-color));
+}
+
+#header {
+    background-image: url('../images/bg_img.png');
+    background-size: cover;
+    background-position: 55% 20%;
+    width: 100vw;
+    height: 100vh;
+}
+
+#bg_filter {
+    background: linear-gradient(
+        rgba(var(--theme-color), .2) 0%,
+        rgba(var(--theme-color), 1) 100%
+    );
+    width: 100vw;
+    height: 100vh;
+}
+
 #results {
     display: flex; 
     flex-wrap: wrap;

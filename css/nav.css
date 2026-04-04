@@ -1,15 +1,163 @@
-ul {
+@media screen and (max-width: 450px) {
+    .nav-elems.logo-title-container .nav-title {
+        display: none;
+    }
+}
+
+@media  screen and (min-width: 887px) {
+    .navbar {
+        height: 64px;
+    }
+
+    .nav-elems.tabs-container {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 887px) {
+    .navbar {
+        flex-direction: column;
+        align-items: start;
+        height: 37vh;
+        gap: 10px;
+    }
+
+    .nav-elems.tabs-container {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .nav-elems.tabs-container .nav-tabs {
+        flex-direction: column;
+        align-items: start;
+        padding: 0;
+        gap: 10px;
+    }
+}
+
+.navbar {
+    background-color: rgb(var(--nav-bg));
+    width: 100vw;
     display: flex;
-    width: 100%;
-    font-size: 30px;
-    justify-content: space-evenly;
-    list-style: none;
-    background: #281f67;
-    color: white;
-    text-decoration: underline;
-    padding: 5px 0;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
     position: fixed;
     top: 0;
+    z-index: 999;
+}
+
+.nav-elems {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-elems.logo-title-container .nav-logo {
+    background-color: color-mix(in oklab, #261237 20%, transparent);
+    width: 40px;
+    height: 40px;
+    border-radius: .75rem;
+    border: 1px solid rgb(72,35,128);
+    display: flex;
+    justify-content: center;
+    align-self: center;
     cursor: pointer;
-    z-index: 9999;
+}
+
+.nav-elems.logo-title-container .nav-logo img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.nav-elems.logo-title-container .nav-title {
+    font-family: var(--text-font-family);
+    font-weight: bold;
+    color: rgb(var(--font-color));
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-elems.logo-title-container .nav-title span {
+    color: #a44dff;
+    cursor: pointer;
+}
+
+.nav-elems.tabs-container {
+    background-color: rgb(var(--nav-tabs-color));
+    padding: 20px;
+}
+
+.nav-elems.tabs-container .nav-explore {
+    color: #a44dff;
+    font-family: var(--components-font-family);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.nav-elems.tabs-container .nav-tabs {
+    display: flex;
+    list-style: none;
+}
+
+.nav-elems.tabs-container .nav-tab {
+    color: rgb(var(--nav-explore-tab-tabs-font-color));
+    font-family: var(--components-font-family);
+    cursor: pointer;
+    transition: all .4s;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+
+.nav-elems.tabs-container .nav-tab:hover {
+    color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
+    background-color: var(--nav-explore-tab-tabs-hover-bg-color);
+}
+
+.nav-elems.theme-sign-in-up .toggle-theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: .75rem;
+    background-color: var(--nav-explore-tab-bg-color);
+    color: rgb(var(--nav-explore-tab-tabs-font-color));
+    border: 1px solid transparent;
+    transition: all .4s;
+}
+
+.nav-elems.theme-sign-in-up .toggle-theme:hover {
+    background-color: color-mix(in oklab, #261237 20%, transparent);
+    border: 1px solid rgb(72,35,128); 
+    color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
+}
+
+.nav-elems.theme-sign-in-up .sign-in-up-button {
+    padding: 5px 30px;
+    border-radius: .75rem;
+    font-size: 15px;
+    border: none;
+    font-family: var(--components-font-family);
+    transition: all .4s;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.nav-elems.theme-sign-in-up .sign-in {
+    background-color: transparent;
+    color: rgb(var(--nav-explore-tab-tabs-font-color));
+}
+
+.nav-elems.theme-sign-in-up .sign-in:hover {
+    color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
+    border: 1px solid rgb(var(--nav-explore-tab-tabs-hover-font-color))
+}
+
+.nav-elems.theme-sign-in-up .sign-up:hover {
+    background-color: transparent;
+    border: 1px solid rgb(var(--nav-explore-tab-tabs-hover-font-color));
+    color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
 }
