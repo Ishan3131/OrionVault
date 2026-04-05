@@ -1,6 +1,9 @@
 import * as api from "./api.js";
 import * as ui from './ui.js'
 const results = document.getElementById('results');
+let theme = localStorage.getItem('theme')
+if(theme === null) localStorage.setItem('theme', 'dark');
+else if(theme == 'light') ui.toggleTheme(true)
 
 async function renderGames(queries = {}) {
     let games = await api.getGamesCollection(queries);
@@ -20,9 +23,7 @@ async function renderGames(queries = {}) {
             </div>
             <div class="game_more_details"></div>
         </div>
-`
-        div.addEventListener('mouseenter', ui.game_card_hover);
-        div.addEventListener('mouseleave', ui.game_card_mouseLeave);
+        `
         results.appendChild(div);
     }
 }
@@ -61,5 +62,7 @@ async function renderDevs(queries = {}) {
 document.getElementById('nav_games').addEventListener('click', () => renderGames())
 document.getElementById('nav_genres').addEventListener('click', () => renderGenres())
 document.getElementById('nav_devs').addEventListener('click', () => renderDevs())
+document.querySelector('.nav-more-options-button').addEventListener('click', ui.moreOptions);
+document.querySelector('.toggle-theme').addEventListener('click', ui.toggleTheme);
 
 renderGames();
