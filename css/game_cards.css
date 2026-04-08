@@ -7,30 +7,15 @@
     display: flex;
     width: fit-content;
     height: fit-content;
-}
-
-.game_container .game_img {
-    width: 337px;
-    height: 300px;
     background-size: cover;
     background-position: center;
-    border-radius: 30px;
-}
-
-.game_container .game_detail_panel {
-    position: absolute;
+    cursor: pointer;
     width: 337px;
     height: 300px;
-    background: rgba(0,0,0, .4);
-    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: end;
-    transition: all .5s;
-}
-
-.game_container .game_more_details {
-    opacity: 0;
+    border-radius: 10%;
 }
 
 .game_container .game_less_details {
@@ -61,24 +46,4 @@
 
 .game_container:hover {
     scale: 1.05;
-}
-
-.game_container:hover .game_img {
-    border-radius: 30px 0 0 30px;
-}
-
-.game_container:hover .game_detail_panel {
-    background: #09142b;
-    border-radius: 0 30px 30px 0;
-    transform: translate(337px);
-    z-index: 999;
-}
-
-.game_container:hover .game_less_details {
-    opacity: 0;
-}
-
-.game_container:hover .game_more_details {
-    display: block;
-    opacity: 1;
 }

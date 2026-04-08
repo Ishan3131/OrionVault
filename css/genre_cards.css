@@ -1,32 +1,18 @@
 .genre_container {
-    width: 400px;
-    height: 350px;
+    width: 350px;
+    height: 300px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
     border-radius: 20px;
-}
-
-.genre_img {
     background-size: cover;
     background-position: center;
-    width: 400px;
-    height: 250px;
-    border-radius: 20px 20px 0 0;
-}
-
-.genre_details {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    width: 400px;
-    height: 100px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: rgb(1, 0, 79);
-    border-radius: 0 0 20px 20px
-}
-
-.genre_name, .genre_games_count {
     color: white;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.genre_container:hover {
+    scale: 1.05;
 }

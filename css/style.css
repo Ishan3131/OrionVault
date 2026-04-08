@@ -30,7 +30,7 @@ body {
     background-color: rgb(var(--theme-color));
 }
 
-#header {
+.header {
     background-image: url('../images/bg_img.png');
     background-size: cover;
     background-position: 55% 20%;
@@ -38,13 +38,16 @@ body {
     height: 100vh;
 }
 
-#bg_filter {
+.bg_filter {
     background: linear-gradient(
         rgba(var(--theme-color), .2) 0%,
         rgba(var(--theme-color), 1) 100%
-    );
+        );
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #results {
@@ -54,3 +57,4 @@ body {
     justify-content: space-evenly;
     margin-top: 50px;
 }
+

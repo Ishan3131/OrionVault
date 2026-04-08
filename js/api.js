@@ -1,5 +1,6 @@
 const endpoints = {
     games: 'games',
+    game_details: id => `games/${id}`,
     similar_games: id =>  `games/${id}/suggested`,
     game_youtube: id => `games/${id}/youtube`,
     genres: 'genres',
@@ -9,6 +10,8 @@ const endpoints = {
     next_developers: null,
     developer: id => `developers/${id}`
 }
+
+const cache = {}
 
 
 function generateApi(endpoint,queries) {
@@ -20,8 +23,16 @@ function generateApi(endpoint,queries) {
 }
 
 async function getData(api) {
-    let data = await fetch(api);
-    return await data.json();
+    if(api in cache) return cache[api]
+    try{
+        let res = await fetch(api);
+        const data = await res.json();
+        cache[api] = data;
+        return data;
+    }
+    catch (err) {
+        console.log(err)
+    }
 }
 
 async function getGamesCollection(queries) {
@@ -36,4 +47,7 @@ async function getDevelopers(queries) {
     return await getData(generateApi(endpoints.developers,queries));
 }
 
-export {getGamesCollection, getGenresCollection, getDevelopers, endpoints}
+async function getGameDetails(queries,id) {
+    return await getData(generateApi(endpoints.game_details(id),queries))
+}
+export {getGamesCollection, getGenresCollection, getDevelopers, getGameDetails, endpoints}
