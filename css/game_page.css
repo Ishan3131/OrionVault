@@ -1,0 +1,76 @@
+.overview {
+    display: flex;
+    flex-direction: column;
+}
+
+.overview .game-page-header {
+    background-image: url('../images/bg_img2.jpeg');
+    background-size: cover;
+    background-position: 50% 30%;
+    width: 100vw;
+    height: fit-content;
+}
+
+
+.overview .game-page-header .header-filter {
+    background: linear-gradient(
+        rgba(var(--theme-color), .3) 0%,
+        rgba(var(--theme-color), 1) 100%
+        );
+    padding: 100px 30px 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.game-overview-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    border: .5px solid #a44cff;
+}
+
+.game-overview-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.game-overview-genres {
+    display: flex;
+    gap: 20px;
+}
+
+.game-overview-genre-tag {
+    font-family: var(--text-font-family);
+    color: #a44cff;
+    font-size: 15px;
+    background-color: color-mix(in oklab, #261237 20%, transparent);
+    border: 1px solid rgb(72, 35, 128);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.game-overview-title {
+    font-family: var(--text-font-family);
+    font-size: clamp(20px, 7cqi, 60px);
+    background: linear-gradient(
+        to right, 
+        #a87ff3 0%,
+        #6391f5 40%,
+        #1ab9eb 75%,
+        #00c9d1 100% 
+  );    
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.game-overview-reviews {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-family: var(--text-font-family);
+    color: rgb(var(--font-color));
+}

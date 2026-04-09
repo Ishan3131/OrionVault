@@ -14,7 +14,7 @@ const endpoints = {
 const cache = {}
 
 
-function generateApi(endpoint,queries) {
+function generateApi(endpoint,queries={}) {
     let queryString = ''
     for(let k in queries) {
         queryString += `&${k}=${queries[k]}`
@@ -47,7 +47,11 @@ async function getDevelopers(queries) {
     return await getData(generateApi(endpoints.developers,queries));
 }
 
-async function getGameDetails(queries,id) {
-    return await getData(generateApi(endpoints.game_details(id),queries))
+async function getGameDetails(id,queries) {
+    return await getData(generateApi(endpoints.game_details(id),queries));
 }
-export {getGamesCollection, getGenresCollection, getDevelopers, getGameDetails, endpoints}
+
+async function getYoutubeVideo(id,queries) {
+    return await getData(generateApi(endpoints.game_youtube(id),queries));
+}
+export {getGamesCollection, getGenresCollection, getDevelopers, getGameDetails, getYoutubeVideo, endpoints}
