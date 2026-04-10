@@ -65,23 +65,5 @@ document.querySelector('.toggle-theme').addEventListener('click', ui.toggleTheme
 renderGames();
 
 async function openGameDetails(id) {
-    console.log('id: ',id)
-    const gameWin = window.open('./html/game.html');
-    const details = await api.getGameDetails(id);
-
-    gameWin.document.querySelector('.game-overview-img').src = details.background_image;
-
-    const genresSec = gameWin.document.querySelector('.game-overview-genres');
-    details.genres.forEach(genre => {
-        genresSec.innerHTML += `<button class="game-overview-genre-tag">${genre.name}</button>`
-    })
-
-    gameWin.document.querySelector('.game-overview-title').innerText = details.name;
-    gameWin.document.querySelector('.game-overview-rating').innerText = details.rating;
-    gameWin.document.querySelector('.game-overview-reviews-count').innerText = details.ratings_count;
-    
-    const videoId = await api.getYoutubeVideo(id);
-    gameWin.document.querySelector('.game-page-video').src = `https://www.youtube.com/embed/${videoId}`
-    console.log(details);
-    console.log(videoId);
+    window.open('./game.html?gameId='+id);
 }
