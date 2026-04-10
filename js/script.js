@@ -1,6 +1,7 @@
 import * as api from "./api.js";
 import * as ui from './ui.js'
 const results = document.getElementById('results');
+
 let theme = localStorage.getItem('theme')
 if(theme === null) localStorage.setItem('theme', 'dark');
 else if(theme == 'light') ui.toggleTheme(true)
@@ -62,7 +63,7 @@ document.getElementById('nav_devs').addEventListener('click', () => renderDevs()
 document.querySelector('.nav-more-options-button').addEventListener('click', ui.moreOptions);
 document.querySelector('.toggle-theme').addEventListener('click', ui.toggleTheme);
 
-renderGames();
+renderGames({page_size: '50'});
 
 async function openGameDetails(id) {
     window.open('./game.html?gameId='+id);

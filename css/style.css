@@ -15,6 +15,8 @@
     --nav-explore-tab-tabs-font-color: 122,133,166;
     --nav-explore-tab-tabs-hover-font-color: 255,255,255;
     --nav-explore-tab-tabs-hover-bg-color: #261237;
+    --genre-tag-background: color-mix(in oklab, #261237 20%, transparent);
+    --genre-tag-border-color: rgb(72, 35, 128)
 }
 
 [data-theme='light'] {
@@ -22,8 +24,11 @@
     --nav-bg: 228,227,231;
     --font-color: 0,0,0;
     --nav-explore-tab-bg-color: '#ffffff';
+    --nav-explore-tab-tabs-font-color: 100,100,100;
     --nav-explore-tab-tabs-hover-font-color: 0,0,0;
     --nav-explore-tab-tabs-hover-bg-color: #d7c2e9;
+    --genre-tag-background: color-mix(in oklab, #ad4cff 20%, transparent);
+    --genre-tag-border-color: rgb(146 73 255)
 }
 
 body {
