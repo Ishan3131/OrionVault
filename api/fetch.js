@@ -1,6 +1,5 @@
 export default async function handler(req,res) {
-    // const allowedSite = 'orion-vault-two.vercel.app';
-    const allowedSite = 'localhost:3000'
+    const allowedSite = 'orion-vault-two.vercel.app';
     if(req.headers.host !== allowedSite) {
         return res.status(403).json({error: 'Forbidden'})
     }
