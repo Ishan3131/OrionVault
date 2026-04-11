@@ -12,7 +12,7 @@
     </head>
 
     <body>
-        <section class="header">
+        <section id="header" class="header">
             <div class="bg_filter">
                 <nav class="navbar" style="height: 64px;">
                     <div class="nav-elems logo-title-container">
@@ -23,9 +23,9 @@
                     <div class="nav-elems tabs-container">
                         <p class="nav-explore">EXPLORE</p>
                         <ul class="nav-tabs">
-                            <li class="nav-tab" id="nav_games">Games</li>
-                            <li class="nav-tab" id="nav_genres">Genres</li>
-                            <li class="nav-tab" id="nav_devs">Developers</li>
+                            <li class="nav-tab" id="nav_games"><a href="#games">Games</a></li>
+                            <li class="nav-tab" id="nav_genres"><a href="#geres">Genres</a></li>
+                            <li class="nav-tab" id="nav_devs"><a href="#devs">Developers</a></li>
                         </ul>
                     </div>
 
@@ -58,6 +58,33 @@
         </sction>
         
         <div id="results"></div>
+        <section id="footer">
+            <div class="footer-description">
+                <a href="#header" class="nav-elems logo-title-container">
+                    <div class="nav-logo"><img src="images/logo.svg"></div>
+                    <p class="nav-title">ORION <span>VAULT</span></p>
+                </a>
+
+                <p class="footer-text" class="footer-tagline">Your universe of games. Thousands of titles from indie studios to AAA publishers — all in one galactic store.</p>
+            </div>
+
+            <div class="footer-contact">
+                <p class="footer-text">Contact</p>
+                <div class="email">
+                    <img class="footer-imgs" src="./images/email.svg" />
+                    <p class="footer-text">orionvault@gmail.com</p>
+                </div>
+                <div class="phone">
+                    <img src="./images/message.svg" class="footer-imgs">
+                    <p class="footer-text">+91 7628-232-234</p>
+                </div>
+            </div>
+
+            <div class="footer-rights">
+                <p class="footer-text">© 2026 Orion Vault. All rights reserved.</p>
+            </div>
+
+        </section>
     </body>
 <script type="module" src="./js/script.js"></script>
 

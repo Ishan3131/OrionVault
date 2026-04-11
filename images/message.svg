@@ -1,0 +1,23 @@
+<svg width="260" height="220" viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Bottom Light Blue Bubble -->
+  <path d="
+    M50 30
+    H190
+    Q230 30 230 70
+    V130
+    Q230 170 190 170
+    H125
+    L100 195
+    Q95 200 90 195
+    L95 170
+    H50
+    Q20 170 20 140
+    V70
+    Q20 30 50 30
+    Z" fill="#5B86E5"></path>
+
+  <!-- Top Dark Blue Overlay -->
+  <rect x="45" y="55" width="170" height="90" rx="45" fill="#0B57D0" opacity="0.9"></rect>
+
+</svg>

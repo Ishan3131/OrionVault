@@ -61,6 +61,7 @@
     top: 0;
     z-index: 999;
     transition: all .4s;
+    animation: disable;
 }
 
 .nav-elems {
@@ -118,16 +119,17 @@
     list-style: none;
 }
 
-.nav-elems.tabs-container .nav-tab {
+.nav-elems.tabs-container .nav-tab a{
     color: rgb(var(--nav-explore-tab-tabs-font-color));
     font-family: var(--components-font-family);
     cursor: pointer;
     transition: all .4s;
     padding: 5px 15px;
     border-radius: 30px;
+    text-decoration: none;
 }
 
-.nav-elems.tabs-container .nav-tab:hover {
+.nav-elems.tabs-container .nav-tab a:hover {
     color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
     background-color: var(--nav-explore-tab-tabs-hover-bg-color);
 }

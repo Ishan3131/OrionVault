@@ -66,5 +66,5 @@ document.querySelector('.toggle-theme').addEventListener('click', ui.toggleTheme
 renderGames({page_size: '50'});
 
 async function openGameDetails(id) {
-    window.open('./game.html?gameId='+id);
+    window.open('./html/game.html?gameId='+id);
 }

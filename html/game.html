@@ -13,15 +13,15 @@
     <body>
         <!----------------------------- Nav Bar ------------------------------->
         <nav class="navbar" style="height: 64px;">
-            <div class="nav-elems logo-title-container">
+            <a href="../index.html" class="nav-elems logo-title-container">
                 <div class="nav-logo"><img src="../images/logo.svg"></div>
                 <p class="nav-title">ORION <span>VAULT</span></p>
-            </div>
+            </a>
             <div class="nav-elems tabs-container">
                 <ul class="nav-tabs">
-                    <li class="nav-tab">Overview</li>
-                    <li class="nav-tab">Requirements</li>
-                    <li class="nav-tab">Buy</li>
+                    <li class="nav-tab"><a href="#overview">Overview</a></li>
+                    <li class="nav-tab"><a href="#requirements">Requirements</a></li>
+                    <li class="nav-tab"><a href="#buy">Buy</a></li>
                 </ul>
             </div>
             <div class="nav-elems theme-sign-in-up">
@@ -65,13 +65,14 @@
                         <div class="game-overview-platforms"></div>
                     
                     </div>
-                    
+                    <div class="game-page-video-about">
+                        <div class="game-page-video">
+                            <iframe src="" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-page-about"></div>
+                    </div>
                 </div>
             </div>
-            <div class="game-page-video">
-                <iframe src="" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="game-page-about"></div>
         </section>
 
         <!---------------------- Requirements Section -------------------------->
@@ -89,7 +90,36 @@
             
         </section>
 
+        <!------------------------- Footer Section ------------------------------>
+        <section id="footer">
+            <div class="footer-description">
+                <a href="../index.html" class="nav-elems logo-title-container">
+                    <div class="nav-logo"><img src="../images/logo.svg"></div>
+                    <p class="nav-title">ORION <span>VAULT</span></p>
+                </a>
+
+                <p class="footer-text" class="footer-tagline">Your universe of games. Thousands of titles from indie studios to AAA publishers — all in one galactic store.</p>
+            </div>
+
+            <div class="footer-contact">
+                <p class="footer-text">Contact</p>
+                <div class="email">
+                    <img class="footer-imgs" src="../images/email.svg" />
+                    <p class="footer-text">orionvault@gmail.com</p>
+                </div>
+                <div class="phone">
+                    <img src="../images/message.svg" class="footer-imgs">
+                    <p class="footer-text">+91 7628-232-234</p>
+                </div>
+            </div>
+
+            <div class="footer-rights">
+                <p class="footer-text">© 2026 Orion Vault. All rights reserved.</p>
+            </div>
+
+        </section>
+
     </body>
-    <script type="module" src="./js/gamePage.js"></script>
+    <script type="module" src="../js/gamePage.js"></script>
 
 </html>
