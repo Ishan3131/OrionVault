@@ -1,68 +1,51 @@
 * {
     margin: 0;
-    transition: all .5s;
+    padding: 0;
 }
 
-.game_container {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
+.card {
+    position: relative;
+    background-image: url("https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg");
+    min-width: 350px;
+    height: 250px;
     background-size: cover;
     background-position: center;
-    cursor: pointer;
-    width: 337px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
+    border-radius: 20px;
+    border: 1px solid black;
     align-items: end;
-    border-radius: 10%;
+    display: flex;
+    cursor: pointer;
+    transition: all .4s;
+    padding: 0;
 }
 
-.game_container .game_less_details {
+.card-details {
+    position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(5px);
     color: white;
-    width: 280px;
-    row-gap: 10px;
-    transition: all .5s;
-}
-
-.game_container .game_name {
-    grid-column: 1/span 2;
-    font-size: 30px;
+    font-family: 'Orbitron';
+    width: 100%;
+    bottom: 0;
+    row-gap: 5px;
     font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 0 18px 18px;
+    margin: 0;
 }
 
-.game_container .game_genre {
+.card-text1 {
     font-size: 20px;
-    font-weight: 100px;
+    grid-column: span 2;
 }
 
-.game_container .game_rating {
-    font-size: 20px;
-    text-align: right;
-    font-weight: 100px;
+.card-text2 {
+    font-size: 15px;
 }
 
-.game_container:hover {
-    scale: 1.05;
-}
-
-.genre_container {
-    width: 350px;
-    height: 300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    border-radius: 20px;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.genre_container:hover {
-    scale: 1.05;
+.card-text3 {
+    font-size: 15px;
 }

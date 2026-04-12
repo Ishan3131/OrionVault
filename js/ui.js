@@ -7,6 +7,10 @@ const theme_icons = {'dark': `<svg xmlns="http://www.w3.org/2000/svg" width="24"
     'light': `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-4 h-4" aria-hidden="true" data-hercules-id="src/pages/_components/Navbar.tsx:90:18" data-hercules-name="Sun"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>`
 }
 
+const more_option_icons = {'close': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-5 h-5" aria-hidden="true" data-hercules-id="src/pages/_components/Navbar.tsx:122:12" data-hercules-name="X"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>`,
+    'open': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-5 h-5" aria-hidden="true" data-hercules-id="src/pages/_components/Navbar.tsx:124:12" data-hercules-name="Menu"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>`
+}
+
 let is_nav_opened = false;
 
 
@@ -20,7 +24,7 @@ function moreOptions() {
             nav_elem1.style.opacity = '1';
             nav_elem2.style.opacity = '1';
         }, 200)
-        more_option_button.innerText = 'x';
+        more_option_button.innerHTML = more_option_icons.close;
     }
     else {
         is_nav_opened = false;
@@ -31,7 +35,7 @@ function moreOptions() {
             nav_elem1.style.display = 'none';
             nav_elem2.style.display = 'none';
         },400)
-        more_option_button.innerText = '≡';
+        more_option_button.innerHTML = more_option_icons.open;
     }
 }
 

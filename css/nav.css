@@ -109,6 +109,7 @@
 .nav-elems.tabs-container {
     background-color: rgb(var(--nav-tabs-color));
     padding: 20px;
+    margin-left: 150px;
 }
 
 .nav-elems.tabs-container .nav-explore {
@@ -124,7 +125,7 @@
     list-style: none;
 }
 
-.nav-elems.tabs-container .nav-tab a{
+.nav-tab a{
     color: rgb(var(--nav-explore-tab-tabs-font-color));
     font-family: var(--components-font-family);
     cursor: pointer;
@@ -134,7 +135,12 @@
     text-decoration: none;
 }
 
-.nav-elems.tabs-container .nav-tab a:hover, .nav-elems.tabs-container .nav-tab a:focus {
+.nav-select a {
+    color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
+    background-color: var(--nav-explore-tab-tabs-hover-bg-color);
+}
+
+.nav-tab a:hover, .nav-tab a:focus {
     color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
     background-color: var(--nav-explore-tab-tabs-hover-bg-color);
 }

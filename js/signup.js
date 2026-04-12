@@ -29,7 +29,7 @@ function signup() {
 function reset(e) {
     e.target.classList.remove('error')
     e.target.value = '';
-    age.type = 'number';
+    if(e.target.id == 'age') age.type = 'number';
 }
 
 document.querySelector('#signup_button').addEventListener('click', signup);
