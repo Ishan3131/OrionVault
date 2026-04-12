@@ -13,7 +13,7 @@ let is_nav_opened = false;
 function moreOptions() {
     if(!is_nav_opened) {
         is_nav_opened = true;
-        nav_bar.style.height = '37vh';
+        nav_bar.style.height = '59vh';
         setTimeout(() => {
             nav_elem1.style.display = 'flex';
             nav_elem2.style.display = 'flex';

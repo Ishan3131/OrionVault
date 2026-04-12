@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-weight: bold;
+  color: white;
+  transition: all .4s;
+}
+
+@media screen and (min-width: 746px) {
+
+  .messages h4 {
+    font-size: 20px;
+  }
+
+  .messages h1 {
+    font-size: 40px;
+  }
+
+  .messages p {
+    font-size: 15px;
+  }
+
+  label {
+    font-size: 15px;
+    margin-top: 60px;
+  }
+
+  .input-field {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 746px) {
+
+  .messages h4 {
+    font-size: 3.5cqi;
+  }
+
+  .messages h1 {
+    font-size: 5.5cqi;
+  }
+
+  .messages p {
+    font-size: 2.5cqi;
+  }
+
+  label {
+    font-size: 2.5cqi;
+    margin-top: 10vw;
+  }
+
+  .input-field {
+    font-size: 2.5cqi;
+  }
+}
+
+body {
+  background-image: url('../images/orion.png');
+  background-position: 32% 0;
+}
+
+.signup-form {
+  width: 94vw;
+  max-width: 700px;
+  height: 74vh;
+  backdrop-filter: blur(7px);
+  border: 1px solid black;
+  position: absolute;
+  top: 13vh;
+  right: 3vw;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  align-items: center;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.fields label {
+  margin-bottom: 10px;
+}
+
+span {
+  color: rgb(173, 173, 173);
+}
+
+.input-field {
+    background: transparent;
+    border: 1.5px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input-field:hover, .input-field:focus {
+  border-color: white;
+  scale: 1.02;
+}
+
+#signup_button {
+    margin-top: 40px;
+    background: transparent;
+    border: 1.5px solid black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    align-self: end;
+}
+
+#signup_button:hover, #signup_button:focus {
+  border-color: white;
+  scale: 1.1;
+}
+
+.error {
+  color: rgb(255, 49, 49);
+  border-color: rgb(255, 49, 49);
+}

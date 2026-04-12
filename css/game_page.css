@@ -1,6 +1,7 @@
 * {
     margin: 0;
     cursor: default;
+    outline: none;
 }
 
 section:not(.header):not(#footer) *{
@@ -44,14 +45,6 @@ section:not(.header):not(#footer) *{
     .platform-name {
         font-size: 12px;
     }
-
-    .game-page-video {
-        width: 70vw;
-    }
-
-    .game-page-about {
-        width: 70vw;
-    }
 }
 
 @media screen and (max-width: 660px) {
@@ -78,14 +71,6 @@ section:not(.header):not(#footer) *{
 
     .platform-name {
         font-size: 3vw;
-    }
-
-    .game-page-video {
-        width: 90vw;
-    }
-
-    .game-page-about {
-        width: 90vw;
     }
 }
 
@@ -186,7 +171,7 @@ a {
     cursor: pointer;
 }
 
-.game-overview-site:hover {
+.game-overview-site:hover, .game-overview-site:focus {
     text-decoration: underline;
 }
 
@@ -238,6 +223,7 @@ a {
     border: 1px solid #a44cff;
     border-radius: 15px;
     margin-bottom: 30px;
+    width: 90vw;
 }
 
 .game-page-about {
@@ -252,4 +238,5 @@ a {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 90vw;
 }

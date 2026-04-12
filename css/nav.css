@@ -4,7 +4,7 @@
     }
 }
 
-@media  screen and (min-width: 994px) {
+@media  screen and (min-width: 1188px) {
     .navbar {
         height: 64px;
     }
@@ -17,7 +17,7 @@
     }
 }
 
-@media screen and (max-width: 994px) {
+@media screen and (max-width: 1188px) {
     .navbar {
         flex-direction: column;
         align-items: start;
@@ -48,6 +48,11 @@
     .nav-more-options-button {
         display: block;
     }
+}
+
+* {
+    transition: all .4s;
+    outline: none;
 }
 
 .navbar {
@@ -129,9 +134,14 @@
     text-decoration: none;
 }
 
-.nav-elems.tabs-container .nav-tab a:hover {
+.nav-elems.tabs-container .nav-tab a:hover, .nav-elems.tabs-container .nav-tab a:focus {
     color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
     background-color: var(--nav-explore-tab-tabs-hover-bg-color);
+}
+
+.nav-elems.theme-sign-in-up {
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-elems.theme-sign-in-up .toggle-theme {
@@ -145,9 +155,10 @@
     color: rgb(var(--nav-explore-tab-tabs-font-color));
     border: 1px solid transparent;
     transition: all .4s;
+    cursor: pointer;
 }
 
-.nav-elems.theme-sign-in-up .toggle-theme:hover {
+.nav-elems.theme-sign-in-up .toggle-theme:hover, .nav-elems.theme-sign-in-up .toggle-theme:focus {
     background-color: color-mix(in oklab, #261237 20%, transparent);
     border: 1px solid rgb(72,35,128); 
     color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
@@ -164,21 +175,12 @@
     font-weight: bold;
 }
 
-.nav-elems.theme-sign-in-up .sign-in {
-    background-color: transparent;
-    color: rgb(var(--nav-explore-tab-tabs-font-color));
-}
-
-.nav-elems.theme-sign-in-up .sign-in:hover {
-    color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
-    border: 1px solid rgb(var(--nav-explore-tab-tabs-hover-font-color))
-}
-
 .nav-elems.theme-sign-in-up .sign-up {
     background-color: #a44dff;
+    cursor: pointer;
 }
 
-.nav-elems.theme-sign-in-up .sign-up:hover {
+.nav-elems.theme-sign-in-up .sign-up:hover, .nav-elems.theme-sign-in-up .sign-up:focus {
     background-color: transparent;
     border: 1px solid rgb(var(--nav-explore-tab-tabs-hover-font-color));
     color: rgb(var(--nav-explore-tab-tabs-hover-font-color));
@@ -192,8 +194,47 @@
     font-size: 40px;
     font-weight: bold;
     transition: all .4s;
+    cursor: pointer;
 }
 
-.nav-more-options-button:hover {
+.nav-more-options-button:hover, .nav-more-options-button:focus {
     color: rgb(var(--nav-explore-tab-tabs-hover-font-color))
+}
+
+.nav-search-tab {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.nav-search-input {
+    padding: 5px 15px;
+    background: transparent;
+    border: 1px solid rgb(var(--nav-explore-tab-tabs-font-color));
+    border-radius: 20px;
+    font-size: 15px;
+    width: 200px;
+    font-family: var(--components-font-family);
+    color: rgb(var(--nav-explore-tab-tabs-font-color));
+    cursor: pointer;
+}
+.nav-search-input:hover, .nav-search-input:focus {
+    border-color: rgb(var(--font-color));
+    color: rgb(var(--font-color));
+}
+
+.nav-search-button {
+    background-color: transparent;
+    border: 1px solid rgb(var(--nav-explore-tab-tabs-font-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+    color: rgb(var(--nav-explore-tab-tabs-font-color));
+    cursor: pointer;
+}
+.nav-search-button:hover, .nav-search-button:focus {
+    border-color: rgb(var(--font-color));
+    color: rgb(var(--font-color));
 }

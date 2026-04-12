@@ -3,11 +3,11 @@ const endpoints = {
     game_details: id => `games/${id}`,
     similar_games: id =>  `games/${id}/suggested`,
     game_youtube: id => `games/${id}/youtube`,
+    game_screenshots: id => `games/${id}/screenshots`,
     genres: 'genres',
     genre_games: id => `genres/${id}`,
     platforms: 'platforms',
     developers: 'developers',
-    next_developers: null,
     developer: id => `developers/${id}`
 }
 
