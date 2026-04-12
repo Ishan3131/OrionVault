@@ -88,7 +88,7 @@ document.querySelector('.nav-more-options-button').addEventListener('click', ui.
 document.querySelector('.toggle-theme').addEventListener('click', ui.toggleTheme);
 
 renderGames(trendingSection, {page_size: '10'})
-renderGames(gameSection, {page_size: '20'});
+renderGames(gameSection, {page_size: '80'});
 
 function openGameDetails(id) {
     window.open('./html/game.html?gameId='+id);
@@ -108,7 +108,7 @@ function switchTab(e) {
         if(!('vault-select' in gameSection.classList)) {
             document.querySelector('.vault-select').classList.remove('vault-select');
             gameSection.classList.add('vault-select');
-            renderGames(gameSection, {page_size: '20'});
+            renderGames(gameSection, {page_size: '80'});
             switched = true
         }
     }
@@ -116,7 +116,7 @@ function switchTab(e) {
         if(!('vault-select' in genreSection.classList)) {
             document.querySelector('.vault-select').classList.remove('vault-select');
             genreSection.classList.add('vault-select');
-            renderGenres(genreSection);
+            renderGenres(genreSection), {page_size: '40'};
             switched = true
         }
     }
@@ -124,7 +124,7 @@ function switchTab(e) {
         if(!('vault-select' in devSection.classList)) {
             document.querySelector('.vault-select').classList.remove('vault-select');
             devSection.classList.add('vault-select');
-            renderDevs(devSection);
+            renderDevs(devSection, {page_size: '80'});
             switched = true;
         }
     }

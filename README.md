@@ -26,3 +26,6 @@ This project uses the RAWG Video Games Database API to fetch game data:
 https://rawg.io/apidocs
 
 The API provides information such as game details, ratings, release dates, platforms, and more.
+
+Note: It might look AI generated, because it is. But only the design.
+Each and every line of code is human written.
